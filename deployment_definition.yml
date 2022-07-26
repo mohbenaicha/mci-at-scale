@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  
+  selector:
+    matchLabels:
+      object: mci_pod
+  replicas: 4
+  
+  template:
+    metadata:
+      labels:
+        object: mci_pod
+    spec:
+      containers:
+      - name: mci-api
+        image: moben1992/mci-application
+        ports:
+        - containerPort: 8888
