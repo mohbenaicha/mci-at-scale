@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    object: pg_pod
+data:
+  POSTGRES_DB: mci-app-db
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: password
