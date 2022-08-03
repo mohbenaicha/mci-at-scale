@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mci-app-service
 spec:
-  type: NodePort 	# default
+  type: LoadBalancer 	# default
   ports:
     - nodePort: 30004	# server/localhost port exposed
       port: 8001 	# service port exposed
